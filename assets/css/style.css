@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--header-bg-color: #10375c;
+}
+
 html {
 	font-size: 62.5%;
 }
@@ -9,4 +13,157 @@ html {
 body {
 	font-size: 1.6rem;
 	font-family: "Sora", sans-serif;
+}
+
+/* ================================= common ========================================================================================= */
+.container {
+	width: 1170px;
+	max-width: calc(100% - 48px);
+	margin: 0 auto;
+}
+
+.btn {
+	display: inline-block;
+	min-width: 205px;
+	line-height: 60px;
+	background-color: #2e80ce;
+	text-align: center;
+	color: #fff;
+	font-size: 1.8rem;
+	border-radius: 999px;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ================================= header ========================================================================================= */
+.header {
+	padding-top: 30px;
+	background-color: var(--header-bg-color);
+	min-height: 100vh;
+}
+
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar__list {
+	display: flex;
+}
+
+.header__action--login,
+.navbar__link {
+	padding: 8px 21px;
+	color: #c9d2da;
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 175%;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+	text-shadow: 1px 0 0 currentColor;
+	color: #fff;
+}
+
+.navbar__link--active::before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #fff;
+	top: -3px;
+	position: relative;
+	right: 8px;
+}
+
+.header__action--signup {
+	min-width: 144px;
+	line-height: 44px;
+	font-size: 1.6rem;
+}
+
+.header__action--login {
+	margin-right: 7px;
+}
+
+.header__action--login:hover {
+	text-shadow: 1px 0 0 currentColor;
+	color: #fff;
+}
+
+/* ================================= hero ========================================================================================= */
+.hero {
+	display: flex;
+	align-items: center;
+	padding: 76px 0px;
+}
+
+.hero__content {
+	width: 44%;
+}
+
+.hero__media {
+	flex: 1;
+}
+
+.hero__heading {
+	color: #fff;
+	font-size: 7rem;
+	font-weight: 600;
+	line-height: 114%;
+	letter-spacing: -1.4px;
+}
+
+.hero__desc {
+	margin-top: 22px;
+	color: #c9d2da;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 167%;
+}
+
+.hero__row {
+	margin-top: 38px;
+	display: flex;
+	align-items: center;
+	gap: 38px;
+}
+
+.hero__phone {
+	color: #fff;
+	text-align: center;
+	font-size: 1.8rem;
+	line-height: 167%;
+}
+
+.hero__images {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.hero__image {
+	border-radius: 6px;
+	object-fit: cover;
+}
+
+.hero__image-large {
+	width: 330px;
+	height: 540px;
+	margin-right: -6px;
+	z-index: 1;
+}
+
+.hero__image-small {
+	width: 210px;
+	height: 410px;
 }
